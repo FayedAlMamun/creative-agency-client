@@ -1,0 +1,24 @@
+.inp-title{
+    height: 40px;
+    width: 350px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.inp-des{
+    height: 200px;
+    width: 350px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.inp-des::placeholder{
+    text-align: center;
+   
+}
+.inp-file{
+    background-color: rgb(212, 241, 247);
+    border-top-right-radius: 10px;
+}
+.btn-submit{
+    padding: 10px;
+    border-radius: 10px;
+}

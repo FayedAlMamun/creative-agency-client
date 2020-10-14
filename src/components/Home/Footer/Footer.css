@@ -1,0 +1,20 @@
+.inp-footer{
+    height: 30px;
+    width:400px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+.inp-message{
+    height: 150px;
+    width: 400px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+.bg-footer{
+    height: 500px;
+    background-color: goldenrod;
+}

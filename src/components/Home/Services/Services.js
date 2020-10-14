@@ -1,0 +1,44 @@
+import React from 'react';
+import slack from '../../../images/logos/slack.png'
+import google from '../../../images/logos/google1.png'
+import uber from '../../../images/logos/uber.png'
+import netflix from '../../../images/logos/netflix.png'
+import airbnb from '../../../images/logos/airbnb.png'
+import fake from '../../fake'
+import ServiceDetails from '../ServiceDetails/ServiceDetails';
+const Services = () => {
+    return (
+        <div>
+            <div className="row justify-content-center offset-sm-1">
+                <div className="col-12 col-sm-6 col-md-2">
+                <img className='mr-5 mt-3' height='50px' src={slack} alt=""/>
+                </div>
+                <div className="col-12 col-sm-6 col-md-2">
+                <img className='mr-5 mt-3' height='50px' src={google} alt=""/>
+                </div>
+                <div className="col-12 col-sm-6 col-md-2">
+                <img className='mr-4 mt-3' height='50px' src={uber} alt=""/>
+                </div>
+                <div className="col-12 col-sm-6 col-md-2">
+                <img className='mr-4 mt-3' height='50px' src={netflix} alt=""/>
+                </div>
+                <div className="col-12 col-sm-6 col-md-2">
+                <img className='mr-4 mt-3' height='50px' src={airbnb} alt=""/>
+                </div>
+                
+            </div>
+            <div className="text-center mt-5 pt-5">
+                <h1>Provide awesome <span className="text-color">services</span></h1>
+            </div>
+            <div className='d-flex justify-content-center'>
+            <div className="row w-75">
+                {
+                    fake.map(info => <ServiceDetails info={info}></ServiceDetails>)
+                }
+            </div>
+        </div>
+        </div>
+    );
+};
+
+export default Services;

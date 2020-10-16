@@ -10,7 +10,7 @@ const ServiceDetails = ({ info }) => {
         <div className="mt-5 pt-5 col-12 col-md-4 ">
             <Link to={'customerOrder/' + info._id} style={{ textDecoration: 'none' }}>
 
-                <animated.div className="text-center p-2 mb-2 animated"  onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })} onMouseLeave={() => set({ xys: [0, 0, 1] })} style={{ transform: props.xys.interpolate(trans) }}>
+                <animated.div className="text-center p-2 mb-2 animated" onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })} onMouseLeave={() => set({ xys: [0, 0, 1] })} style={{ transform: props.xys.interpolate(trans) }}>
 
                     {info.image.img && <img height='40px' className='rounded img fluid' src={`data:image/png;base64,${info.image.img}`} alt="" />}
                     <h3 className='mt-3 text-dark '>{info.title}</h3>

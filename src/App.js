@@ -24,39 +24,39 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/'>
-            <Home/>
+            <Home />
           </Route>
-          <Route  path='/home'>
-            <Home/>
+          <Route path='/home'>
+            <Home />
           </Route>
           <Route path='/login'>
-            <Login/>
+            <Login />
           </Route>
           <Route path='/Addservices'>
-            <AddServices/>
+            <AddServices />
           </Route>
           <Route path='/review'>
-            <AddReview/>
+            <AddReview />
           </Route>
           <Route path='/customerServicesList'>
-            <CustomerStatus/>
+            <CustomerStatus />
           </Route>
           <Route path='/makeAdmin'>
-            <AddAdmin/>
+            <AddAdmin />
           </Route>
           <Route path='/adminServicesList'>
-            <AdminServiceList/>
+            <AdminServiceList />
           </Route>
           <PrivateRoute path='/customerOrder/:_id'>
-            <PlaceOrder/>
+            <PlaceOrder />
           </PrivateRoute>
           <Route path='*'>
-            <NoMatch/>
+            <NoMatch />
           </Route>
         </Switch>
       </Router>
-   
-  </userInfo.Provider>
+
+    </userInfo.Provider>
   );
 }
 

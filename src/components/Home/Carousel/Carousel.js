@@ -11,32 +11,8 @@ const CarouselSection = () => {
     setIndex(selectedIndex);
   };
   return (
-    //     <Carousel className='mt-5 bg-dark' activeIndex={index} onSelect={handleSelect}>
-    //         <h3 className='text-center'>Here are some of <span>our work</span></h3>
-    //   <Carousel.Item className='text-center'>
-    //     <img
-    //       className=""
-    //       src={carouse1}
-    //       alt="First slide"
-    //     />
-    //   </Carousel.Item>
-    //   <Carousel.Item className='text-center'>
-    //     <img
-    //       className=""
-    //       src={carouse2}
-    //       alt="Second slide"
-    //     />
-    //   </Carousel.Item>
-    //   <Carousel.Item className='text-center'>
-    //     <img
-    //       className=""
-    //       src={carouse3}
-    //       alt="Third slide"
-    //     />
-    //   </Carousel.Item>
-    // </Carousel>
-    <div  className="mt-5 bg-carousel ">
-      <h3 className='text-white text-center'>Here are some of <span style={{color:'#7db45d'}}>our works</span></h3>
+    <div className="mt-5 bg-carousel ">
+      <h3 className='text-white text-center'>Here are some of <span style={{ color: '#7db45d' }}>our works</span></h3>
       <Carousel className='' activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item className='text-center mt-5'>
           <img

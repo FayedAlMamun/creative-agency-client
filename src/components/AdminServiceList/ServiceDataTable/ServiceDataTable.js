@@ -2,25 +2,25 @@ import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown'
 import './ServiceDataTable.css'
 import gif from '../../../images/loading2.gif'
-const ServiceDataTable = ({ orderList,loading}) => {
-    const handlePending=(find,id,index)=>{
-        const value=document.getElementById(find).innerText;
-        document.getElementById(`value${index}`).innerText=value;
-        if(document.getElementById(`value${index}`).innerText==='Done'){
-            document.getElementById(`value${index}`).style.color='#58b984'
+const ServiceDataTable = ({ orderList, loading }) => {
+    const handlePending = (find, id, index) => {
+        const value = document.getElementById(find).innerText;
+        document.getElementById(`value${index}`).innerText = value;
+        if (document.getElementById(`value${index}`).innerText === 'Done') {
+            document.getElementById(`value${index}`).style.color = '#58b984'
         }
-        if(document.getElementById(`value${index}`).innerText==='Pending'){
-            document.getElementById(`value${index}`).style.color='#ff5858'
+        if (document.getElementById(`value${index}`).innerText === 'Pending') {
+            document.getElementById(`value${index}`).style.color = '#ff5858'
         }
-        if(document.getElementById(`value${index}`).innerText==='On-going'){
-            document.getElementById(`value${index}`).style.color='#ffc14b'
+        if (document.getElementById(`value${index}`).innerText === 'On-going') {
+            document.getElementById(`value${index}`).style.color = '#ffc14b'
         }
-        const product ={status:value}
-        fetch(`https://enigmatic-dusk-58690.herokuapp.com/update/${id}`,{
-            method:'PATCH',
-            headers:{'Content-Type':'application/json'},
-            body:JSON.stringify(product)
- 
+        const product = { status: value }
+        fetch(`https://enigmatic-dusk-58690.herokuapp.com/update/${id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(product)
+
         })
     }
     return (
@@ -36,7 +36,7 @@ const ServiceDataTable = ({ orderList,loading}) => {
             </thead>
             <tbody>
                 {
-                    orderList.map((order,index) =>
+                    orderList.map((order, index) =>
 
                         <tr>
                             <td>{order.displayName}</td>
@@ -50,9 +50,9 @@ const ServiceDataTable = ({ orderList,loading}) => {
                                     </Dropdown.Toggle>
 
                                     <Dropdown.Menu>
-                                    <Dropdown.Item  id={`Done${index}`} onClick={()=>handlePending(`Done${index}`,`${order._id}`,`${index}`)}>Done</Dropdown.Item>
-                                        <Dropdown.Item  id={`pending${index}`} onClick={()=>handlePending(`pending${index}`,`${order._id}`,`${index}`)}>Pending</Dropdown.Item>
-                                        <Dropdown.Item  id={`going${index}`} onClick={()=>handlePending(`going${index}`,`${order._id}`,`${index}`)} >On-going</Dropdown.Item>
+                                        <Dropdown.Item id={`Done${index}`} onClick={() => handlePending(`Done${index}`, `${order._id}`, `${index}`)}>Done</Dropdown.Item>
+                                        <Dropdown.Item id={`pending${index}`} onClick={() => handlePending(`pending${index}`, `${order._id}`, `${index}`)}>Pending</Dropdown.Item>
+                                        <Dropdown.Item id={`going${index}`} onClick={() => handlePending(`going${index}`, `${order._id}`, `${index}`)} >On-going</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </td>

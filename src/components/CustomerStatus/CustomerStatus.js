@@ -29,7 +29,7 @@ const CustomerStatus = () => {
                             {
                                 orders.map(order => {
                                     return [
-                                        <div class="col-12 col-md-4 mt-3 border" style={{borderRadius:'15px',backgroundColor:'white'}}>
+                                        <div class="col-12 col-md-4 mt-3 border" style={{ borderRadius: '15px', backgroundColor: 'white' }}>
                                             <div className="d-flex justify-content-between pl-4 pt-4">
                                                 <img height='40px' className='rounded img fluid' src={`data:image/png;base64,${order.image.img}`} alt="" />
                                                 <button className={`${order.status}-status`}>{order.status}</button>

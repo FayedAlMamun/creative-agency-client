@@ -13,10 +13,7 @@ const AddAdmin = () => {
     }
     const handleSubmit = (e) => {
         const formData = new FormData()
-
         formData.append('email', admin.email);
-
-
         fetch('https://enigmatic-dusk-58690.herokuapp.com/addAdmin', {
             method: 'POST',
             body: formData
@@ -28,7 +25,7 @@ const AddAdmin = () => {
             .catch(error => {
                 console.error(error)
             })
-            e.preventDefault();
+        e.preventDefault();
     }
     return (
         <section className="container-fluid row">

@@ -18,7 +18,7 @@ const AdminServiceList = () => {
     return (
         <div className="container-fluid row" >
             <Sidebar adminService='active'></Sidebar>
-            <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0,backgroundColor:'#f4f7fc',height:'100vh' }}>
+            <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: '#f4f7fc', height: '100vh' }}>
                 <div className="d-flex justify-content-between">
                     <h5 className="text-brand">Services List</h5>
                     <h5 className="text-brand">{loggedInUser.displayName}</h5>

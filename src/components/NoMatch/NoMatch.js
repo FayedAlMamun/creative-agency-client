@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NoMatch = () => {
-    return (    
+    return (
         <div>
             <h1>Route Not Found!</h1>
         </div>

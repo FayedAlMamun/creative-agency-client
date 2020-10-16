@@ -36,7 +36,7 @@ const AddServices = () => {
             .catch(error => {
                 console.error(error)
             })
-            e.preventDefault()
+        e.preventDefault()
     }
     return (
         <section className="container-fluid row">
@@ -48,7 +48,7 @@ const AddServices = () => {
                 </div>
                 <div className='mt-3' style={{ backgroundColor: "#f4f7fc", height: '100vh' }}>
                     <div className="p-5">
-                        <form onSubmit={handleSubmit}  className='bg-white' style={{ borderRadius: '15px' }}>
+                        <form onSubmit={handleSubmit} className='bg-white' style={{ borderRadius: '15px' }}>
                             <div className="d-flex">
                                 <div className="form-group pl-4 pt-4">
                                     <label style={{ fontWeight: 700 }} htmlFor="exampleInputEmail1">Service Title</label><br />

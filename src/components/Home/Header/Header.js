@@ -8,8 +8,8 @@ const Header = () => {
     return (
         <div className='header-container'>
             <NavbarMenu></NavbarMenu>
-            <HeaderMain/>
-            
+            <HeaderMain />
+
         </div>
     );
 };

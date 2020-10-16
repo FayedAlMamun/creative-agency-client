@@ -8,11 +8,11 @@ import Services from '../Services/Services';
 const Home = () => {
     return (
         <div>
-            <Header/>
-            <Services/>
-            <CarouselSection/>
-            <Review/>
-            <Footer/>
+            <Header />
+            <Services />
+            <CarouselSection />
+            <Review />
+            <Footer />
         </div>
     );
 };

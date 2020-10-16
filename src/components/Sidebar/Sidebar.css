@@ -14,3 +14,20 @@
 .sidebar svg{
     margin-right: 5px;
 }
+.active{
+    color: #99d4b4 !important;
+}
+@media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar li {float: left;}
+}
+@media screen and (max-width: 400px) {
+    .sidebar li {
+      text-align: center;
+      float: none;
+    }
+  }

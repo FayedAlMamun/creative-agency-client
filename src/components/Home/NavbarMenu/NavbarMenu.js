@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import logo from '../../../images/logos/logo.png'
-
+import './NavbarMenu.css'
+import { Link } from 'react-router-dom';
 
 const NavbarMenu = () => {
     return (
@@ -15,7 +16,7 @@ const NavbarMenu = () => {
             <Nav.Link  className='mr-5' href="#pricing">Our Portfolio</Nav.Link>
             <Nav.Link className='mr-5' href="#deets">Our Team</Nav.Link>
             <Nav.Link className='mr-5' href="#memes">Contact Us</Nav.Link>
-            <button className="btn btn-dark mr-5">Login</button>
+            <Link to ='/login'><button className="nav-btn mr-5">Login</button></Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

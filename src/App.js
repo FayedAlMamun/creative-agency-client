@@ -9,6 +9,12 @@ import {
 } from "react-router-dom";
 import NoMatch from './components/NoMatch/NoMatch';
 import AddServices from './components/AddServices/AddServices';
+import AddReview from './components/AddReview/AddReview';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import CustomerStatus from './components/CustomerStatus/CustomerStatus';
+import AddAdmin from './components/AddAdmin/AddAdmin';
+import AdminServiceList from './components/AdminServiceList/AdminServiceList';
 
 export const userInfo = createContext()
 function App() {
@@ -26,9 +32,24 @@ function App() {
           <Route path='/login'>
             <Login/>
           </Route>
-          <Route path='/admin'>
+          <Route path='/Addservices'>
             <AddServices/>
           </Route>
+          <Route path='/review'>
+            <AddReview/>
+          </Route>
+          <Route path='/customerServicesList'>
+            <CustomerStatus/>
+          </Route>
+          <Route path='/makeAdmin'>
+            <AddAdmin/>
+          </Route>
+          <Route path='/adminServicesList'>
+            <AdminServiceList/>
+          </Route>
+          <PrivateRoute path='/customerOrder/:_id'>
+            <PlaceOrder/>
+          </PrivateRoute>
           <Route path='*'>
             <NoMatch/>
           </Route>

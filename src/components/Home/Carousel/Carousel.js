@@ -35,8 +35,8 @@ const CarouselSection = () => {
     //     />
     //   </Carousel.Item>
     // </Carousel>
-    <div  className="mt-5 bg-dark ">
-      <h3 className='text-white text-center'>Here are some of our works</h3>
+    <div  className="mt-5 bg-carousel ">
+      <h3 className='text-white text-center'>Here are some of <span style={{color:'#7db45d'}}>our works</span></h3>
       <Carousel className='' activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item className='text-center mt-5'>
           <img

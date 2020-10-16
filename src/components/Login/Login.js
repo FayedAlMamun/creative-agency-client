@@ -6,11 +6,12 @@ import './Login.css'
 import logo from '../../images/logos/logo.png'
 import googleLogo from '../../images/logos/google.png';
 import { userInfo } from '../../App';
+import { useHistory, useLocation } from 'react-router-dom';
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userInfo);
-    //let history = useHistory();
-    //let location = useLocation();
-    //let { from } = location.state || { from: { pathname: "/" } };
+    let history = useHistory();
+    let location = useLocation();
+    let { from } = location.state || { from: { pathname: "/" } };
     if (firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);
     }
@@ -21,7 +22,7 @@ const Login = () => {
             const { displayName, email } = nuser;
             const signedInUser = { displayName: displayName, email: email, error: false }
             setLoggedInUser(signedInUser);
-           //` history.replace(from);
+            history.replace(from);
         }).catch(err => {
             const user = { ...loggedInUser }
             user.error = true
@@ -46,9 +47,6 @@ const Login = () => {
                     <p>Don't have an account? <span style={{ color: 'royalblue', cursor: 'pointer' }}><u>Create an account</u></span></p>
                 </div>
             </div>
-            {
-                !loggedInUser.error ? <p>{loggedInUser.email}</p>: <p>nai</p>
-            }
         </div>
     );
 };

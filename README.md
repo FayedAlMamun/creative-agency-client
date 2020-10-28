@@ -12,7 +12,7 @@
    - Node js
    - Express js
    - MongoDb
-   -JavaScript
+   - JavaScript
    - Bootstrap
    - HTML
    - CSS

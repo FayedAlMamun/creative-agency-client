@@ -14,5 +14,5 @@
    - MongoDb
    -JavaScript
    - Bootstrap
-   -HTML
-   -CSS
+   - HTML
+   - CSS

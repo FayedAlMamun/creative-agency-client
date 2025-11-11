@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import gif from '../../../images/loading.gif'
+import gif from '../../../images/loading.gif';
 const Review = () => {
     const [review, setReview] = useState([])
     useEffect(() => {
-        fetch('https://enigmatic-dusk-58690.herokuapp.com/reviews')
+        fetch('https://creative-agency-server-chi.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReview(data))
     }, [])

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { userInfo } from '../../App';
-import './AddAdmin.css'
 import Sidebar from '../Sidebar/Sidebar';
+import './AddAdmin.css';
 
 const AddAdmin = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userInfo);
@@ -14,7 +14,7 @@ const AddAdmin = () => {
     const handleSubmit = (e) => {
         const formData = new FormData()
         formData.append('email', admin.email);
-        fetch('https://enigmatic-dusk-58690.herokuapp.com/addAdmin', {
+        fetch('https://creative-agency-server-chi.vercel.app/addAdmin', {
             method: 'POST',
             body: formData
         })

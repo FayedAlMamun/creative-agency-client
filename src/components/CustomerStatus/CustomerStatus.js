@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { userInfo } from '../../App';
+import gif from '../../images/loading2.gif';
 import Sidebar from '../Sidebar/Sidebar';
-import gif from '../../images/loading2.gif'
-import './CustomerStatus.css'
+import './CustomerStatus.css';
 const CustomerStatus = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userInfo);
     const [orders, setOrders] = useState([]);
     const [loading, SetLoading] = useState(true);
     useEffect(() => {
-        fetch('https://enigmatic-dusk-58690.herokuapp.com/orders?email=' + loggedInUser.email)
+        fetch('https://creative-agency-server-chi.vercel.app/orders?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 setOrders(data)

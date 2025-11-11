@@ -1,7 +1,7 @@
 import React from 'react';
-import Dropdown from 'react-bootstrap/Dropdown'
-import './ServiceDataTable.css'
-import gif from '../../../images/loading2.gif'
+import Dropdown from 'react-bootstrap/Dropdown';
+import gif from '../../../images/loading2.gif';
+import './ServiceDataTable.css';
 const ServiceDataTable = ({ orderList, loading }) => {
     const handlePending = (find, id, index) => {
         const value = document.getElementById(find).innerText;
@@ -16,7 +16,7 @@ const ServiceDataTable = ({ orderList, loading }) => {
             document.getElementById(`value${index}`).style.color = '#ffc14b'
         }
         const product = { status: value }
-        fetch(`https://enigmatic-dusk-58690.herokuapp.com/update/${id}`, {
+        fetch(`https://creative-agency-server-chi.vercel.app/update/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(product)

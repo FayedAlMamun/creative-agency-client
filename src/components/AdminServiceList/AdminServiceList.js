@@ -8,7 +8,7 @@ const AdminServiceList = () => {
     const [orderList, setOrderList] = useState([])
     const [loading, SetLoading] = useState(true);
     useEffect(() => {
-        fetch('https://enigmatic-dusk-58690.herokuapp.com/orderList')
+        fetch('https://creative-agency-server-chi.vercel.app/orderList')
             .then(res => res.json())
             .then(data => {
                 setOrderList(data)

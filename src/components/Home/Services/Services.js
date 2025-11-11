@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import slack from '../../../images/logos/slack.png'
-import google from '../../../images/logos/google1.png'
-import uber from '../../../images/logos/uber.png'
-import netflix from '../../../images/logos/netflix.png'
-import airbnb from '../../../images/logos/airbnb.png'
+import gif from '../../../images/loading.gif';
+import airbnb from '../../../images/logos/airbnb.png';
+import google from '../../../images/logos/google1.png';
+import netflix from '../../../images/logos/netflix.png';
+import slack from '../../../images/logos/slack.png';
+import uber from '../../../images/logos/uber.png';
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
-import gif from '../../../images/loading.gif'
-import './Services.css'
+import './Services.css';
 const Services = () => {
     const [service, setService] = useState([])
     useEffect(() => {
-        fetch('https://enigmatic-dusk-58690.herokuapp.com/services')
+        fetch('https://creative-agency-server-chi.vercel.app/services')
             .then(res => res.json())
             .then(data => setService(data))
 

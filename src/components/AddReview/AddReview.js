@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
 import { userInfo } from '../../App';
 import Sidebar from '../Sidebar/Sidebar';
-import './AddReview.css'
+import './AddReview.css';
 const AddReview = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userInfo);
     const [review, setReview] = useState([])
@@ -23,7 +23,7 @@ const AddReview = () => {
         formData.append('name', review.name);
         formData.append('description', review.description);
         formData.append('designation', review.designation);
-        fetch('https://enigmatic-dusk-58690.herokuapp.com/addReview', {
+        fetch('https://creative-agency-server-chi.vercel.app/addReview', {
             method: 'POST',
             body: formData
         })

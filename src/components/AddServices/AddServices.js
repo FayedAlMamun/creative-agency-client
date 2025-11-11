@@ -1,9 +1,9 @@
+import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
 import { userInfo } from '../../App';
 import Sidebar from '../Sidebar/Sidebar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
-import './AddServices.css'
+import './AddServices.css';
 const AddServices = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userInfo);
     const [info, setInfo] = useState([]);
@@ -25,7 +25,7 @@ const AddServices = () => {
         formData.append('title', info.title);
         formData.append('description', info.description);
 
-        fetch('https://enigmatic-dusk-58690.herokuapp.com/addServices', {
+        fetch('https://creative-agency-server-chi.vercel.app/addServices', {
             method: 'POST',
             body: formData
         })

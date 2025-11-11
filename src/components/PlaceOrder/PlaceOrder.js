@@ -1,23 +1,23 @@
+import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { userInfo } from '../../App';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 
 import Sidebar from '../Sidebar/Sidebar';
-import './PlaceOrder.css'
+import './PlaceOrder.css';
 const PlaceOrder = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userInfo);
     const { _id } = useParams()
     const [order, setOrder] = useState({})
     useEffect(() => {
-        fetch(`https://enigmatic-dusk-58690.herokuapp.com/services/${_id}`)
+        fetch(`https://creative-agency-server-chi.vercel.app/services/${_id}`)
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [])
     const handleSubmit = (e) => {
         const newOrder = { ...loggedInUser, _id: loggedInUser.email + order._id, title: order.title, description: order.description, image: order.image, status: 'Done' }
-        fetch('https://enigmatic-dusk-58690.herokuapp.com/Addorders', {
+        fetch('https://creative-agency-server-chi.vercel.app/Addorders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
